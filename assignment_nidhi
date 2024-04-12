@@ -1,0 +1,14 @@
+from datasets import Dataset
+
+data = {
+    "video_id": ["video1", "video2"],
+    "video_url": ["https://www.youtube.com/watch?v=eeM6V5aPjhk", "https://www.youtube.com/watch?v=74NSDMvYZ9Y"],
+    "text": ["Extracted text from the first video...", "Extracted text from the second video..."]
+}
+
+# Create a dataset
+dataset = Dataset.from_dict(data)
+
+# Save the dataset 
+dataset.save_to_disk("my_dataset")
+
